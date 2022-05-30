@@ -1,0 +1,6 @@
+__pycache/
+*.pyc
+opkg_cache/
+.vscode/
+pip_cache/
+*.sqlite
