@@ -2,7 +2,7 @@ import wpilib as wpi #I don't know how to describe WPI, I can just safely say th
 import wpilib.drive #The methods within wpilib specifically related to drive and movement.
 from wpilib.interfaces import GenericHID #I honestly don't know specifically what GenericHID is or what is stands for, I just know that it's necessary for the controllers and their inputs
 import ctre #All libraries and methods related to the "Cross The Road Electronics"(ctre) motors.
-from rev.color import ColorSensorV3 #All libraries and methods related to the color sensor.
+# from rev.color import ColorSensorV3 #All libraries and methods related to the color sensor.
 from networktables import NetworkTables #I know what networktables ARE, but I have no idea how to describe them
 
 import MethodsRobot #Allows the main file robot.py to access all of the methods within the MethodsRobot.py file
@@ -50,23 +50,8 @@ class MyRobot(wpi.TimedRobot):
         self.printTimer = wpi.Timer()
         self.printTimer.reset()
         self.printTimer.start()
-
-        '''
-        self.table = NetworkTables.getTable("limelight")
-        self.tx = self.table.getNumber('tx',None)
-        self.ty = self.table.getNumber('ty',None)
-        self.ta = self.table.getNumber('ta',None)
-        self.ts = self.table.getNumber('ts',None)
-        '''
         
     def teleopPeriodic(self):
-        #self.driveMethods.basicDrive(self.driverController.getX(GenericHID.Hand.kLeftHand)*3/4, self.driverController.getY(GenericHID.Hand.kLeftHand)*3/4)
-        #self.shooterMethods.intake(self.driverController.getBButtonPressed(), self.driverController.getAButtonPressed())
-        #self.shooterMethods.shooting(self.driverController.getTriggerAxis(GenericHID.Hand.kRightHand))
-        #self.shooterMethods.backup(self.driverController.getBumperPressed(GenericHID.Hand.kRightHand))
-        #self.shooterMethods.backup(self.driverController.getTriggerAxis(GenericHID.kRightHand))
-        #self.shooterMethods.shooter(self.driverController.getBumperPressed(GenericHID.Hand.kRightHand))
-        #self.shooterMethods.intake(self.driverController.getBumperPressed(GenericHID.Hand.kLeftHand))
 
         intakeButton = self.driverController.getBumperPressed(GenericHID.Hand.kLeftHand)
         shooterButton = self.driverController.getBumperPressed(GenericHID.Hand.kRightHand)

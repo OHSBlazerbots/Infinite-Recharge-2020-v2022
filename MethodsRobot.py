@@ -2,7 +2,6 @@ import wpilib as wpi
 from wpilib.drive import DifferentialDrive
 from wpilib.interfaces import GenericHID
 import ctre
-from rev.color import ColorSensorV3
 
 import ports
 
